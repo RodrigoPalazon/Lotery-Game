@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //player 1 type a number
+           
+            let n1 = prompt("Player 1, type a number: ");
+            n1 = parseInt(n1);
+            
+
+        //player 2 type a number
+            
+            let n2 = prompt("Player 2, type a number: ");
+            n2 = parseInt(n2);
+            
+        //if the same, write 'Tied'
+           
+                if( n1 === n2){
+                alert("The game is TIED.");
+            
+                }else{
+               
+                let randomNumber = parseInt(Math.random()*2);
+                
+                /*if random number be 0, wins who
+                chose the lower number*/
+                if(randomNumber === 0){
+                    if(n1 < n2){
+                        alert("The random number is: " + randomNumber + ". The LOWER number Wins with the number " + n1);
+                        alert("Player 1 WON.");
+                            }else{
+                                alert("Player 2 WON.");
+                              }
+                                   
+        /*if random number be 1, wins who
+        chose the greater number*/
+                        } else{
+                            alert("The random number is: " + randomNumber + ". The HIGHER number Wins with the number " + n2);
+                            if(n1 > n2){
+                                alert("Player 1 WON.");
+                            }else{
+                                alert("Player 2 WON.");
+                                }
+                             }
+            } 
+    </script>
+    
+</body>
+</html>
